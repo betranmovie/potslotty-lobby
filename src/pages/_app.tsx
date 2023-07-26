@@ -34,6 +34,10 @@ export default function MyApp(props: MyAppProps) {
         (async () => {
             const WebApp: any = await import("@twa-dev/sdk")
             WebApp.default.enableClosingConfirmation()
+            WebApp.default.BackButton.show()
+            WebApp.default.BackButton.show()
+            WebApp.default.expand()
+            // WebApp.default.
         })()
     }, [])
 

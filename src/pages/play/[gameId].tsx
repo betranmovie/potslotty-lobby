@@ -22,16 +22,11 @@ export default function GameDetail() {
   }, [idGame])
 
   return (
-    <div className='flex justify-center h-screen items-center'>
+    <div className='flex justify-center items-center'>
       {isLoading ?
-
         <span className="loader"></span>
-
         :
         <div className='flex flex-col h-screen w-screen'>
-          <Link href={'/'}>
-            <h1 className='text-white' >Back</h1>
-          </Link>
           <Iframe url={gameInfo?.url}
             className=''
             styles={{
@@ -39,6 +34,13 @@ export default function GameDetail() {
               height: '100%'
             }}
           />
+          <Iframe url="https://www.sdrive.app/embed/1ptBQD"
+            width="100%"
+            height="320px"
+            id=""
+            className=""
+            display="block"
+            position="relative" />
         </div>
 
       }

@@ -1,10 +1,14 @@
 import { login } from '@/apis/authen';
 import Header from '@/components/Header';
+import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 
   const [isLoading, setIsLoading] = useState<boolean>(true)
+
+  const router = useRouter()
+  const idGame = router.query.gameId + ""
   const renderChildren = () =>
     React.Children.map(children, (child: any) => React.cloneElement(child));
 
