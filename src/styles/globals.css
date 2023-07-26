@@ -266,7 +266,8 @@ html {
 
 body {
   margin: 0;
-  line-height: inherit
+  line-height: inherit;
+  background-color: #0000;
 }
 
 hr {
