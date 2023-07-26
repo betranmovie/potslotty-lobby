@@ -78,6 +78,13 @@ export default function index() {
             </div>
 
 
+            <div className='px-4 mb-5' >
+                <a href='/'>
+                    <img src={ThumbnailEarn.src} alt="Earn1" className='w-full mt-8 rounded-md' />
+                </a>
+            </div>
+
+
 
 
 

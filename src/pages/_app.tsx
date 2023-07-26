@@ -37,9 +37,11 @@ export default function MyApp(props: MyAppProps) {
         (async () => {
             const WebApp: any = await import("@twa-dev/sdk")
             WebApp.default.enableClosingConfirmation()
+            console.log(idGame)
             { idGame ? WebApp.default.BackButton.show() : WebApp.default.BackButton.hide() }
             WebApp.default.expand()
-            WebApp.default.onEvent(() => router.push('/'))
+            WebApp.default.onEvent('backButtonClicked', () => router.push('/'))
+
         })()
     }, [idGame])
 
