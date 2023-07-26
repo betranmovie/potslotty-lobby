@@ -9,6 +9,14 @@ async function fetchListGame() {
         // Handle error here
     }
 }
+async function fetchGameDetail(id:string) {
+    try {
+        const response = await instance.get(`game/${id}?lang=en`); // or instance.get('/endpoint');
+        return response.data
+    } catch (error) {
+        // Handle error here
+    }
+}
 
 
-export { fetchListGame }
+export { fetchListGame, fetchGameDetail }

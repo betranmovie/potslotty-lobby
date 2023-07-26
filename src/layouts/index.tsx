@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     (async () => {
 
       let userData = await login()
-      console.log(userData)
+  
       setIsLoading(false)
       localStorage.setItem('userdata', JSON.stringify(userData))
     })()

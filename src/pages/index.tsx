@@ -11,13 +11,26 @@ import { IGameCategory } from '@/types/games'
 export default function index() {
     const [listGame, setListGame] = useState<IGameCategory>()
 
+    const renderCategory = () => {
+
+        for (let key in listGame) {
+
+            return <CategoryList listGame={listGame[key]} categoryName={key} />
+        }
+    }
+
+
 
     useEffect(() => {
         (async () => {
-            let listGame = await fetchListGame()
-            console.log(listGame)
+            let reslistGame = await fetchListGame()
+            setListGame(reslistGame)
         })()
     }, [])
+
+
+
+
     return (
         <div>
             <div className='px-4 mb-4 mt-4' >
@@ -44,23 +57,25 @@ export default function index() {
                     <img src={ThumbnailEarn.src} alt="Earn" className='w-full mt-8 rounded-md' />
                 </a>
             </div> */}
-            <CategoryList categoryName={"Slots"} />
+            {/* <CategoryList categoryName={"Slots"} />
 
-            <CategoryList categoryName={"Crypto Games"} />
+            <CategoryList categoryName={"Crypto Games"} /> */}
+
+            {/* <CategoryList categoryName={"Live Casino"} />
+
+            <CategoryList categoryName={"Buy Feature"} />
+            <CategoryList categoryName={"Wild Wild West"} /> */}
+
+            {
+
+                renderCategory()
+
+            }
             <div className='px-4 mb-5' >
                 <a href='/'>
                     <img src={ThumbnailEarn.src} alt="Earn" className='w-full mt-8 rounded-md' />
                 </a>
             </div>
-            <CategoryList categoryName={"Live Casino"} />
-
-            <CategoryList categoryName={"Buy Feature"} />
-            <CategoryList categoryName={"Wild Wild West"} />
-
-            {
-
-            }
-
 
 
 

@@ -1,17 +1,20 @@
 import React, { useRef } from 'react'
 import GameItem from '../GameItem'
+import { IGame } from '@/types/games';
 
 interface Props {
     categoryName: string;
     categoryId?: number;
+    listGame: any
 }
 
-export default function CategoryList({ categoryName }: Props) {
+export default function CategoryList({ categoryName, listGame }: Props) {
     const scrollElement: any = useRef(null)
 
     const scroll = (scrollOffset: number) => {
         scrollElement.current.scrollLeft += scrollOffset;
     };
+
 
     return (
         <div className='mx-4 mb-6'>
@@ -26,10 +29,14 @@ export default function CategoryList({ categoryName }: Props) {
                 </button>
             </div>
             <div ref={scrollElement} className='overflow-x-auto hide-scroll flex svelte-9k01mu scroll-smooth'>
-                <GameItem />
-                <GameItem />
-                <GameItem />
-                <GameItem />
+                {
+                    listGame?.map((game: any, index: number) =>
+                        <div key={index}>
+                            <GameItem gameInfo={game} />
+                        </div>
+                    )
+                }
+
             </div>
         </div>
     )
