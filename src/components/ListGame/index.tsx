@@ -3,7 +3,7 @@ import GameItem from '../GameItem'
 
 function ListGame() {
     return (
-        <div><GameItem /></div>
+        <div>index</div>
     )
 }
 
