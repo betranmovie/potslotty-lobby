@@ -10,8 +10,6 @@ export default function GameDetail() {
 
   const router = useRouter()
   const idGame = router.query.gameId + ""
-  console.log(idGame)
-  console.log(gameInfo)
 
   useEffect(() => {
     (async () => {
@@ -27,15 +25,15 @@ export default function GameDetail() {
         <span className="loader"></span>
         :
         <div className='flex flex-col h-screen w-screen'>
-          {/* <iframe src={gameInfo?.url}
+          <Iframe url={gameInfo?.url}
             className=''
-            sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals allow-storage-access-by-user-activation" allow="camera; microphone; geolocation;"
-            // styles={{
-            //   width: '100%',
-            //   height: '100%'
-            // }}
-          /> */}
-          <iframe className="yFzw6MKed5SilXcABSY5"   src={gameInfo.url} title="Whale Web App" sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals allow-storage-access-by-user-activation" allow="camera; microphone; geolocation; gyroscope; accelerometer"></iframe>
+          
+            styles={{
+              width: '100%',
+              height: '100%'
+            }}
+          />
+         
         </div>
 
       }

@@ -26,6 +26,9 @@ export default function MyApp(props: MyAppProps) {
     const router = useRouter();
     const getLayout = Component.getLayout ?? ((page: any) => page);
 
+    const idGame = router.query.gameId + ""
+
+
     useEffect(() => {
     }, [router.locale]);
 
@@ -34,13 +37,11 @@ export default function MyApp(props: MyAppProps) {
         (async () => {
             const WebApp: any = await import("@twa-dev/sdk")
             WebApp.default.enableClosingConfirmation()
-            WebApp.default.BackButton.show()
-            WebApp.default.BackButton.show()
+            { idGame ? WebApp.default.BackButton.show() : WebApp.default.BackButton.hide() }
             WebApp.default.expand()
-            console.log(WebApp)
-            // WebApp.default.
+            WebApp.default.onEvent(() => router.push('/'))
         })()
-    }, [])
+    }, [idGame])
 
     return (
         <>
