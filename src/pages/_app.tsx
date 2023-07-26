@@ -26,7 +26,7 @@ export default function MyApp(props: MyAppProps) {
     const router = useRouter();
     const getLayout = Component.getLayout ?? ((page: any) => page);
 
-    const idGame = router.query.gameId + ""
+    const idGame = router.query.gameId
 
 
     useEffect(() => {
@@ -38,7 +38,13 @@ export default function MyApp(props: MyAppProps) {
             const WebApp: any = await import("@twa-dev/sdk")
             WebApp.default.enableClosingConfirmation()
             console.log(idGame)
-            { idGame ? WebApp.default.BackButton.show() : WebApp.default.BackButton.hide() }
+            
+            if(idGame){
+                WebApp.default.BackButton.show()
+            }
+            else{
+                WebApp.default.BackButton.hide()
+            }
             WebApp.default.expand()
             WebApp.default.onEvent('backButtonClicked', () => router.push('/'))
 
