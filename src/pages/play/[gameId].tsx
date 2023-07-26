@@ -35,7 +35,7 @@ export default function GameDetail() {
             //   height: '100%'
             // }}
           /> */}
-          <iframe className="yFzw6MKed5SilXcABSY5" src="https://sdl.baoquingtian.com/rgs/views/eanew/embed.html?sid=Sd698c5&locale=en&provider=SuperSlots" title="Whale Web App" sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals allow-storage-access-by-user-activation" allow="camera; microphone; geolocation;"></iframe>
+          <iframe className="yFzw6MKed5SilXcABSY5"   src={gameInfo.url} title="Whale Web App" sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals allow-storage-access-by-user-activation" allow="camera; microphone; geolocation; gyroscope; accelerometer"></iframe>
         </div>
 
       }
