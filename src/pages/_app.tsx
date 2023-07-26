@@ -37,6 +37,7 @@ export default function MyApp(props: MyAppProps) {
             WebApp.default.BackButton.show()
             WebApp.default.BackButton.show()
             WebApp.default.expand()
+            console.log(WebApp)
             // WebApp.default.
         })()
     }, [])

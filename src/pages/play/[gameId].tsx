@@ -27,20 +27,14 @@ export default function GameDetail() {
         <span className="loader"></span>
         :
         <div className='flex flex-col h-screen w-screen'>
-          <Iframe url={gameInfo?.url}
+          <iframe src={gameInfo?.url}
             className=''
-            styles={{
-              width: '100%',
-              height: '100%'
-            }}
+            sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals allow-storage-access-by-user-activation" allow="camera; microphone; geolocation;"
+            // styles={{
+            //   width: '100%',
+            //   height: '100%'
+            // }}
           />
-          <Iframe url="https://www.sdrive.app/embed/1ptBQD"
-            width="100%"
-            height="320px"
-            id=""
-            className=""
-            display="block"
-            position="relative" />
         </div>
 
       }
