@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     })()
   }, [])
   return (
-    <div className={`flex flex-col bg-[#101523] ${idGame? "" : "p-2"} ` }>
+    <div className={`flex flex-col bg-[#101523] ${idGame? "" : "p-2"} h-screen` }>
       {isLoading ?
 
         <div className='flex justify-center h-screen items-center'>
