@@ -53,7 +53,7 @@ export default function MyApp(props: MyAppProps) {
             WebApp.default.onEvent('backButtonClicked', () => router.push('/'))
 
         })()
-    }, [idGame])
+    }, [idGame,path])
 
     return (
         <TonConnectUIProvider manifestUrl={manifestUrl}>
