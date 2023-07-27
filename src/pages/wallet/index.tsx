@@ -19,12 +19,12 @@ const WalletPage = () => {
     return (
         <div className="mx-4 font-semibold text-white">
             <div className="tab-group flex font-semibold">
-                <button className="active-tab tab svelte-s8eivf m-0 inline-block w-full rounded-tl-md px-2 py-3">
+                <button className="active-tab tab svelte-s8eivf m-0 inline-block w-full rounded-t-md px-2 py-3">
                     <h3>Deposit</h3>
                 </button>{" "}
-                <button className="bg-brandblue-600 tab svelte-s8eivf m-0 inline-block w-full rounded-tr-md px-2 py-1">
+                {/* <button className="bg-brandblue-600 tab svelte-s8eivf m-0 inline-block w-full rounded-tr-md px-2 py-1">
                     <h3>Buy crypto</h3>
-                </button>
+                </button> */}
             </div>{" "}
             <div className="svelte-s8eivf rounded-b-md border">
                 <div className="mx-4 mb-4">
@@ -111,7 +111,7 @@ export const PaymentOptionButton = ({
     isActive?: boolean;
 }) => (
     <button className={`payment-option svelte-s8eivf mr-4 rounded-lg border ${isActive && "!border-[#e3a117]"}`}>
-        <div className="flex h-20 w-40 items-center">
+        <div className="flex h-20 w-36 items-center">
             <div className="mx-auto">
                 {icon}
                 <p className="text-s mt-2 text-center">{label}</p>
@@ -123,7 +123,7 @@ export const PaymentOptionButton = ({
 export const PaymentOptions = () => (
     <div className="mb-6">
         <div className="hide-scroll svelte-s8eivf flex overflow-x-auto">
-            <PaymentOptionButton
+            {/* <PaymentOptionButton
                 icon={
                     <svg
                         viewBox="0 0 40 40"
@@ -155,8 +155,8 @@ export const PaymentOptions = () => (
                 }
                 label="@Wallet"
                 isActive={true}
-            />
-            <PaymentOptionButton
+            /> */}
+            {/* <PaymentOptionButton
                 icon={
                     <img
                         src={cryptobotIcon.src}
@@ -165,7 +165,7 @@ export const PaymentOptions = () => (
                     />
                 }
                 label="@CryptoBot"
-            />
+            /> */}
             <PaymentOptionButton
                 icon={
                     <svg
@@ -286,7 +286,7 @@ export const PaymentOptions = () => (
                 }
                 label="Tonhub"
             />
-            <PaymentOptionButton
+            {/* <PaymentOptionButton
                 icon={
                     <svg
                         className="svelte-s8eivf mx-auto h-8"
@@ -297,7 +297,7 @@ export const PaymentOptions = () => (
                     </svg>
                 }
                 label="QR Code"
-            />
+            /> */}
         </div>
     </div>
 );
