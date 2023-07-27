@@ -38,7 +38,7 @@ export default function index() {
                     <div className='pl-4 h-full flex flex-col justify-center'>
                         <h1 className='text-white text-2xl font-bold uppercase leading-7 font-heading xl:text-9xl lg:text-5xl md:2xl'>GAME OF THE WEEK</h1>
                         <button className='bg-white mt-3 svelte-u5bxng rounded-xl'>
-                            <h1 className='lg:p-5 p-2 font-bold svelte-u5bxng md:text-xl lg:text-2xl'>Play</h1>
+                            <h1 className='lg:p-5 p-2 font-bold svelte-u5bxng md:text-xl lg:text-2xl '>Play</h1>
                         </button>
                     </div>
                     <div className='px-3 h-full flex flex-col justify-center'>
