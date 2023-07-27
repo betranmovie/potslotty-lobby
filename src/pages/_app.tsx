@@ -29,6 +29,7 @@ export default function MyApp(props: MyAppProps) {
     const getLayout = Component.getLayout ?? ((page: any) => page);
 
     const idGame = router.query.gameId
+    const path = router.asPath 
 
 
     useEffect(() => {
@@ -41,7 +42,7 @@ export default function MyApp(props: MyAppProps) {
             WebApp.default.enableClosingConfirmation()
             console.log(idGame)
             
-            if(idGame){
+            if(idGame || path!=='/'){
                 WebApp.default.BackButton.show()
             }
             else{
