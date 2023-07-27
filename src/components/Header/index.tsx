@@ -73,7 +73,7 @@ export default function Header() {
                             fill="white"
                         />
                     </svg>{" "}
-                    <span onClick={() => router.push("/withdrawal")} className="text-white">{balance}</span>
+                    <span   onClick={() => router.push("/withdrawal")} className="text-white cursor-pointer">{balance}</span>
                 </button>
                 <img
                     src="https://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png"
