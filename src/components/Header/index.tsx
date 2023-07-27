@@ -10,6 +10,7 @@ import {
     contractAddress,
     beginCell,
 } from "ton-core";
+import Logo from '@/assets/images/logo.png'
 import { WalletContractV4, TonClient, fromNano } from "ton";
 
 export default function Header() {
@@ -44,10 +45,8 @@ export default function Header() {
         <div className="flex items-center justify-between p-5 text-white">
             <Link href="/">
                 <img
-                    className=" object-cover rounded-full h-10 w-10"
-                    src="https://img.freepik.com/premium-vector/gmx-coin-cryptocurrency-concept-banner-background_32996-2315.jpg"
-                    //   width={30}
-                    //   height={30}
+                    className=" object-cover  h-10 "
+                    src={Logo.src}
                     alt="logo"
                 />
             </Link>
