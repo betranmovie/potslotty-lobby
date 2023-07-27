@@ -42,7 +42,7 @@ export default function MyApp(props: MyAppProps) {
             WebApp.default.enableClosingConfirmation()
             console.log(idGame)
             
-            if(idGame || path!=='/'){
+            if(idGame || path=='/wallet' || path == '/withdrawal'){
                 WebApp.default.BackButton.show()
             }
             else{
