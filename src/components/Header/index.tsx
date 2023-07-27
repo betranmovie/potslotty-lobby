@@ -9,9 +9,10 @@ export default function Header() {
     <div className="flex items-center justify-between p-5 text-white">
       <Link href="/">
         <img
-          src="https://www.pngall.com/wp-content/uploads/13/Red-Circle-Logo-PNG.png"
-          width={30}
-          height={30}
+        className=" object-cover rounded-full h-10 w-10"
+          src="https://img.freepik.com/premium-vector/gmx-coin-cryptocurrency-concept-banner-background_32996-2315.jpg"
+        //   width={30}
+        //   height={30}
           alt="logo"
         />
       </Link>
