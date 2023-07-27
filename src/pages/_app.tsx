@@ -1,15 +1,16 @@
 import App, { AppContext, AppProps } from 'next/app';
 import { ReactElement, ReactNode, useEffect } from 'react';
 
-import Head from 'next/head';
-import Layout from 'src/layouts';
+import { TonConnectUIProvider } from '@tonconnect/ui-react';
 import { NextPage } from 'next';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
+import Layout from 'src/layouts';
+
 import '@/styles/globals.css';
 // !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
 import '@/styles/colors.css';
 
-import WebApp from "@twa-dev/sdk";
 
 type NextPageWithLayout = NextPage & {
     getLayout?: (page: ReactElement) => ReactNode;
@@ -19,6 +20,7 @@ interface MyAppProps extends AppProps {
     Component: NextPageWithLayout;
 }
 
+const manifestUrl = 'https://raw.githubusercontent.com/ton-community/tutorials/main/03-client/test/public/tonconnect-manifest.json';
 
 
 export default function MyApp(props: MyAppProps) {
@@ -45,6 +47,7 @@ export default function MyApp(props: MyAppProps) {
             else{
                 WebApp.default.BackButton.hide()
             }
+            // console.log(initData)
             WebApp.default.expand()
             WebApp.default.onEvent('backButtonClicked', () => router.push('/'))
 
@@ -52,6 +55,7 @@ export default function MyApp(props: MyAppProps) {
     }, [idGame])
 
     return (
+        <TonConnectUIProvider manifestUrl={manifestUrl}>
         <>
             <Head>
                 <meta charSet="UTF-8" />
@@ -63,6 +67,7 @@ export default function MyApp(props: MyAppProps) {
             <Layout>{getLayout(<Component {...pageProps} />)}</Layout>
 
         </>
+        </TonConnectUIProvider>
     );
 }
 

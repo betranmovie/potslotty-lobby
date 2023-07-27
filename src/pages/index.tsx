@@ -1,12 +1,12 @@
-import ListGame from '@/components/ListGame'
-import React, { useEffect, useState } from 'react'
-import BgHLGame from '@/assets/images/ont_godhandfeaturebuy.jpg'
-import ThumbnailEarn from '@/assets/images/earn.png'
-
-import CategoryList from '@/components/CategoryList'
-import { login } from '@/apis/authen'
-import { fetchListGame } from '@/apis/games'
-import { IGameCategory } from '@/types/games'
+import { fetchListGame } from '@/apis/games';
+import BgHLGame from '@/assets/images/ont_godhandfeaturebuy.jpg';
+import CategoryList from '@/components/CategoryList';
+import { IGameCategory } from '@/types/games';
+import { useEffect, useState } from 'react';
+import { TonClient } from "ton";
+import {
+    Address
+} from "ton-core";
 
 export default function index() {
     const [listGame, setListGame] = useState<IGameCategory>()
@@ -20,9 +20,26 @@ export default function index() {
     }
 
 
+    const mnemonic = "gentle series goddess law element depth praise fatal section six damp head trick lobster brave job pitch action spirit fire razor repair famous strike"; // your 24 secret words (replace ... with the rest of the words)
 
     useEffect(() => {
         (async () => {
+            try {
+                let client = new TonClient({
+                    endpoint: 'https://scalable-api.tonwhales.com/jsonRPC'
+                });
+                const address = Address.parseFriendly(
+
+                    "EQDROU9C8Ag73oX3T_PVs8cVKuaLIYDcLP4YGq5wjhfhpqgJ"
+
+                ).address;
+
+                const balance = await client.getBalance(address);
+                balance.toLocaleString().slice(0, 4).replace(',', '.')
+                // const { value, address, sendIncrement } = useCounterContract();
+            } catch (error) {
+
+            }
             let reslistGame = await fetchListGame()
             setListGame(reslistGame)
         })()
@@ -71,22 +88,6 @@ export default function index() {
                 renderCategory()
 
             }
-            <div className='px-4 mb-5' >
-                <a href='/'>
-                    <img src={ThumbnailEarn.src} alt="Earn" className='w-full mt-8 rounded-md' />
-                </a>
-            </div>
-
-
-            <div className='px-4 mb-5' >
-                <a href='/'>
-                    <img src={ThumbnailEarn.src} alt="Earn1" className='w-full mt-8 rounded-md' />
-                </a>
-            </div>
-
-
-
-
 
         </div>
     )

@@ -1,5 +1,5 @@
 import cryptobotIcon from "@/assets/icons/cryptobot.png";
-import { ReactElement, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 
 
 const TON_ADDRESS = 'EQDROU9C8Ag73oX3T_PVs8cVKuaLIYDcLP4YGq5wjhfhpqgJ'
@@ -11,88 +11,51 @@ const PRICE_NUMBERS = [5, 10, 20, 50, 100, 150, 200, 250];
 
 
 
-const WalletPage = () => {
-    const [numValue, setNumValue] = useState<number>(5)
+const WithdrawalPage = () => {
+    let balance = Number(localStorage.getItem("balance"))
+    const [numValue, setNumValue] = useState<number>(balance)
+
+
+    useEffect(()=>{
 
 
 
+    }
+    )
     return (
         <div className="mx-4 font-semibold text-white">
             <div className="tab-group flex font-semibold">
-                <button className="active-tab tab svelte-s8eivf m-0 inline-block w-full rounded-tl-md px-2 py-3">
-                    <h3>Deposit</h3>
+                <button className="active-tab tab svelte-s8eivf m-0 inline-block w-full rounded-t-md px-2 py-3">
+                    <h3>Withdrawal</h3>
                 </button>{" "}
-                <button className="bg-brandblue-600 tab svelte-s8eivf m-0 inline-block w-full rounded-tr-md px-2 py-1">
-                    <h3>Buy crypto</h3>
-                </button>
+
             </div>{" "}
             <div className="svelte-s8eivf rounded-b-md border">
                 <div className="mx-4 mb-4">
-                    <div className="mx-auto my-10 w-32 content-center self-center">
-                        <span className="inline-flex h-9 items-center rounded-md px-2.5 py-0.5 text-sm font-medium">
+                    <div className="mx-auto my-10  content-center self-center">
+                        <span className="flex h-9 items-center rounded-md py-0.5 text-sm font-medium">
                             <input
-                                className="deposit-input svelte-s8eivf w-24 border-transparent text-5xl"
+                                className="deposit-input svelte-s8eivf w-full border-transparent text-5xl flex text-center"
                                 type="number"
                                 min={0}
+                                max={balance}
                                 value={numValue}
+                                onChange={(e) => setNumValue(Number(e.target.value))}
                                 step="0.1"
-                            />{" "}
-                            <button className="text-brandblue-200 payment-method-button svelte-s8eivf ml-2 w-24 rounded-md py-1 text-lg">
-                                <svg
-                                    className="mx-auto -mt-1 inline-block h-4 w-5"
-                                    viewBox="0 0 56 56"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <circle cx={28} cy={28} r={28} fill="#0088CC" />
-                                    <path
-                                        fillRule="evenodd"
-                                        clipRule="evenodd"
-                                        d="M20.2088 18.5044L35.9132 18.5043C36.4688 18.5043 37.024 18.5859 37.6042 18.8564C38.2997 19.1806 38.6685 19.6916 38.9269 20.0695C38.947 20.0989 38.9658 20.1292 38.9832 20.1602C39.287 20.701 39.4436 21.2849 39.4436 21.913C39.4436 22.5098 39.3016 23.16 38.9832 23.7267C38.9802 23.7322 38.9771 23.7375 38.974 23.7429L29.0522 40.7864C28.8334 41.1623 28.4307 41.3928 27.9958 41.3913C27.5609 41.3898 27.1598 41.1563 26.9437 40.7789L17.2041 23.7718C17.2013 23.7672 17.1985 23.7626 17.1957 23.7579C16.9728 23.3906 16.6281 22.8226 16.5678 22.0896C16.5124 21.4155 16.6639 20.7401 17.0026 20.1545C17.3413 19.5688 17.8512 19.1006 18.4645 18.814C19.1221 18.5067 19.7885 18.5044 20.2088 18.5044ZM26.7827 20.9391L20.2088 20.9391C19.7769 20.9391 19.6111 20.9657 19.4952 21.0199C19.3349 21.0947 19.2003 21.2178 19.1103 21.3734C19.0203 21.5291 18.9796 21.7095 18.9944 21.8901C19.0029 21.9936 19.0451 22.112 19.294 22.5225C19.2992 22.5311 19.3043 22.5398 19.3093 22.5485L26.7827 35.5984V20.9391ZM29.2175 20.9391V35.6629L36.864 22.5278C36.9503 22.371 37.0088 22.1444 37.0088 21.913C37.0088 21.7253 36.9699 21.5623 36.8829 21.3943C36.7916 21.263 36.736 21.1935 36.6895 21.1459C36.6496 21.1052 36.6189 21.0834 36.5755 21.0632C36.3947 20.9789 36.2097 20.9391 35.9132 20.9391L29.2175 20.9391Z"
-                                        fill="white"
-                                    />
-                                </svg>{" "}
-                                TON{" "}
-                                <svg
-                                    className="svg-inline--fa fa-caret-down h-[18px] inline"
-                                    aria-hidden="true"
-                                    focusable="false"
-                                    data-prefix="fal"
-                                    data-icon="caret-down"
-                                    role="img"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 320 512"
-                                    data-fa-i2svg=""
-                                >
-                                    <path
-                                        fill="currentColor"
-                                        d="M165.6 349.8c-1.4 1.3-3.5 2.2-5.6 2.2s-4.2-.8-5.6-2.2L34.2 236.3c-1.4-1.3-2.2-3.2-2.2-5.2c0-3.9 3.2-7.1 7.1-7.1l241.7 0c3.9 0 7.1 3.2 7.1 7.1c0 2-.8 3.8-2.2 5.2L165.6 349.8zm22 23.3L307.7 259.6c7.8-7.4 12.3-17.7 12.3-28.4c0-21.6-17.5-39.1-39.1-39.1L39.1 192C17.5 192 0 209.5 0 231.1c0 10.8 4.4 21.1 12.3 28.4L132.4 373.1c7.4 7 17.3 10.9 27.6 10.9s20.1-3.9 27.6-10.9z"
-                                    />
-                                </svg>
-                                {/* <i class="fa-light fa-caret-down"></i> */}
-                            </button>
+                            />
+
                         </span>
                     </div>
 
-                    <div className="hide-scroll svelte-s8eivf flex overflow-x-auto mt-4">
-                        {PRICE_NUMBERS.map((number) => (
-                            <div
-                                key={number}
-                                className="game-icon-container svelte-s8eivf mr-3 flex h-12 w-20 flex-shrink-0 cursor-pointer flex-wrap items-center justify-center rounded-md"
-                                onClick={() => setNumValue(number)}
-                            >
-                                {number}
-                            </div>
-                        ))}
-                    </div>
+
 
                     <div className="pt-6">
                         <PaymentOptions />
 
                         <div className="svelte-s8eivf mt-4 grid grid-cols-1">
-                            <a href={`${API_TRANSFER}${TON_ADDRESS}?amount=${numValue}`} className="flex justify-center items-center button deposit-button h-12 common-button svelte-9k01mu">
-                                Deposit
-                            </a>{" "}
+                            <button disabled className="flex  justify-center items-center p-5 rounded-lg  bg-[#2a2a2a]">
+                                Withdrawal
+                            </button>{" "}
                         </div>
                     </div>
                 </div>
@@ -302,4 +265,4 @@ export const PaymentOptions = () => (
     </div>
 );
 
-export default WalletPage;
+export default WithdrawalPage;
