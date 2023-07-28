@@ -33,6 +33,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {renderChildren()}
           </div>
           {/* <Footer/> */}
+          <hr className="h-px mt-6 bg-gray-200 border-0 dark:bg-gray-600" />{" "}
+          <footer className="text-center mb-24 text-xs text-brandblue-200">
+            <p className="mt-4 mb-1">All rights Reserved 2023 - [v1.0.0]</p>
+            <p>
+              <a className="mr-1" href="/terms-and-conditions">Terms and Conditions</a>
+              -
+              <a className="cursor-pointer ml-1">Support</a>
+            </p>
+          </footer>
         </>
       </div>
       <FooterNav />
