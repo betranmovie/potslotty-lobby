@@ -77,14 +77,6 @@ const ProfileUser = () => {
         </div>
         <h1 className="text-lg py-2 mt-5 uppercase font-semibold text-white">Transactions</h1>
         <div className="h-screen/4"><div><ul> </ul></div></div>
-        <footer className="text-center mb-24 text-xs text-brandblue-200">
-          <p className="mt-4 mb-1">All rights Reserved 2023 - [v1.0.0]</p>
-          <p>
-            <a className="mr-1" href="/terms-and-conditions">Terms and Conditions</a>
-            -
-            <a className="cursor-pointer ml-1">Support</a>
-          </p>
-        </footer>
       </div>
     </div>
   )
