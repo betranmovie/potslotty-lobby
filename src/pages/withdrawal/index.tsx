@@ -12,7 +12,7 @@ const PRICE_NUMBERS = [5, 10, 20, 50, 100, 150, 200, 250];
 
 
 const WithdrawalPage = () => {
-    let balance = Number(localStorage.getItem("balance"))
+    let balance = Number(localStorage?.getItem("balance") || "0.00")
     const [numValue, setNumValue] = useState<number>(balance)
 
 

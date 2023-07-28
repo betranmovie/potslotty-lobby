@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { useLocalStorage } from 'usehooks-ts'
 import Link from "next/link";
 import {
     Contract,
@@ -16,6 +17,9 @@ import { WalletContractV4, TonClient, fromNano } from "ton";
 export default function Header() {
     const router = useRouter();
     const [balance, setBalance] = useState<string>("0.00")
+    const [userData, setUserData] = useLocalStorage('userdata', null)
+
+    
 
     useEffect(() => {
         (async () => {
@@ -38,8 +42,9 @@ export default function Header() {
 
             }
 
+
         })()
-    }, [])
+    }, [userData])
 
     return (
         <div className="flex items-center justify-between p-5 text-white">
