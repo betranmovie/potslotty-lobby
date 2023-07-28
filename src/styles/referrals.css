@@ -1,0 +1,29 @@
+.referrals .selected-payment-option {
+  background: radial-gradient(114.55% 114.55% at 50% 111.82%,#2f3ec8 0%,#637af4 100%) !important;
+  border: 1px solid rgba(255,255,255,.15);
+  box-shadow: 0 4px 20px #09087333;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.referrals .selected-payment-option .svelte-zj5ccq {
+  -webkit-text-fill-color: white !important;
+  background-clip: initial;
+}
+
+.referrals .payment-option {
+  background: #28293f;
+  border-top: 1px solid #34364f;
+  border-radius: 5px;
+}
+.referrals .payment-option .svelte-zj5ccq {
+  background: radial-gradient(114.55% 114.55% at 50% 111.82%,#2f3ec8 0%,#637af4 100%),#2ea5ff;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.referrals .balance-container .svelte-zj5ccq , .referrals .game-icon-container .svelte-zj5ccq  {
+  background: radial-gradient(114.55% 114.55% at 50% 111.82%,#2f3ec8 0%,#637af4 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}

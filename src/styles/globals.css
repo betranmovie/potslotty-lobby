@@ -3,6 +3,7 @@
 @tailwind utilities;
 @import './profile.css';
 @import './button.css';
+@import './referrals.css';
 
 /* latin */
 @font-face {
