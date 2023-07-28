@@ -30,25 +30,10 @@ const ProfileUser = () => {
         </div>
         <div className="visible text-white bg-[#28293F] border text-left p-4 my-4 rounded-lg border-white">
           To withdraw, please add your TON wallet address
-          <svg
-            className="svg-inline--fa fa-triangle-exclamation ml-1 w-[18px] inline mb-2 ml-2"
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="far"
-            data-icon="triangle-exclamation"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 512 512"
-            data-fa-i2svg=""
-          ><path
-            fill="currentColor"
-            d="M248.4 84.3c1.6-2.7 4.5-4.3 7.6-4.3s6 1.6 7.6 4.3L461.9 410c1.4 2.3 2.1 4.9 2.1 7.5c0 8-6.5 14.5-14.5 14.5H62.5c-8 0-14.5-6.5-14.5-14.5c0-2.7 .7-5.3 2.1-7.5L248.4 84.3zm-41-25L9.1 385c-6 9.8-9.1 21-9.1 32.5C0 452 28 480 62.5 480h387c34.5 0 62.5-28 62.5-62.5c0-11.5-3.2-22.7-9.1-32.5L304.6 59.3C294.3 42.4 275.9 32 256 32s-38.3 10.4-48.6 27.3zM288 368a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm-8-184c0-13.3-10.7-24-24-24s-24 10.7-24 24v96c0 13.3 10.7 24 24 24s24-10.7 24-24V184z"
-          ></path>
-          </svg>
           <br />
           <div className="flex justify-between">
             <input
-              className="buy-input border-b border-white p-0 bg-transparent text-sm w-4/6 inline-block svelte-13o469e"
+              className="buy-input border-b border-white bg-transparent text-sm w-4/6 inline-block svelte-13o469e"
               type="text"
               placeholder="TON address here"
             />
@@ -93,9 +78,7 @@ const ProfileUser = () => {
         <h1 className="text-lg py-2 mt-5 uppercase font-semibold text-white">Transactions</h1>
         <div className="h-screen/4"><div><ul> </ul></div></div>
         <footer className="text-center mb-24 text-xs text-brandblue-200">
-          <p className="mt-4 mb-1">All rights Reserved - © Whale Games
-            <span className="text-[0.60rem]">[v2.0.2]</span>
-          </p>
+          <p className="mt-4 mb-1">All rights Reserved 2023 - [v1.0.0]</p>
           <p>
             <a className="mr-1" href="/terms-and-conditions">Terms and Conditions</a>
             -
