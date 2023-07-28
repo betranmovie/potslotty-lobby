@@ -10,6 +10,7 @@ import Layout from 'src/layouts';
 import '@/styles/globals.css';
 // !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
 import '@/styles/colors.css';
+import WebApp from '@twa-dev/sdk';
 
 
 type NextPageWithLayout = NextPage & {
@@ -36,6 +37,10 @@ export default function MyApp(props: MyAppProps) {
     }, [router.locale]);
 
 
+
+
+
+
     useEffect(() => {
         (async () => {
             const WebApp: any = await import("@twa-dev/sdk")
@@ -48,9 +53,10 @@ export default function MyApp(props: MyAppProps) {
             else{
                 WebApp.default.BackButton.hide()
             }
-            // console.log(initData)
+            console.log(WebApp.default.initData)
             WebApp.default.expand()
             WebApp.default.onEvent('backButtonClicked', () => router.push('/'))
+       
 
         })()
     }, [idGame,path])

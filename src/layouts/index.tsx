@@ -24,8 +24,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   }, [])
   return (
     <div className={`flex flex-col bg-[#101523] ${idGame ? "" : "p-2"} h-screen`}>
-
-
       <>
         {isLoading && <Loader />}
         {!idGame && <Header />}
