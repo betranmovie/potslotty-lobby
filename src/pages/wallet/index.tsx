@@ -14,8 +14,6 @@ const PRICE_NUMBERS = [5, 10, 20, 50, 100, 150, 200, 250];
 const WalletPage = () => {
     const [numValue, setNumValue] = useState<number>(5)
 
-
-
     return (
         <div className="mx-4 font-semibold text-white">
             <div className="tab-group flex font-semibold">
@@ -34,7 +32,7 @@ const WalletPage = () => {
                                 className="deposit-input svelte-s8eivf w-24 border-transparent text-5xl"
                                 type="number"
                                 min={0}
-                                value={numValue}
+                                defaultValue={numValue}
                                 step="0.1"
                             />{" "}
                             <button className="text-brandblue-200 payment-method-button svelte-s8eivf ml-2 w-24 rounded-md py-1 text-lg">

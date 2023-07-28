@@ -33,7 +33,7 @@ const ProfileUser = () => {
           <br />
           <div className="flex justify-between">
             <input
-              className="buy-input border-b border-white bg-transparent text-sm w-4/6 inline-block svelte-13o469e"
+              className="buy-input border-b border-white bg-transparent text-sm w-4/6 inline-block svelte-13o469e pl-0 pb-1"
               type="text"
               placeholder="TON address here"
             />
