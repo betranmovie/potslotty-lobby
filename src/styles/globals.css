@@ -377,7 +377,7 @@ html {
 body {
   margin: 0;
   line-height: inherit;
-  background-color: #101523;
+  background-color: #060a0d;
 }
 
 hr {
@@ -1922,15 +1922,13 @@ menu.svelte-1x119o6 a.svelte-1x119o6 {
   margin-right: 10px;
   background-image: linear-gradient(
     to right,
-    #b66d10 0,
-    #cd8616 22%,
-    #e3a117 45%,
-    #e8ad19 50%,
-    #edb626 55%,
-    #edb626 78%,
-    #f9c33b 100%
+    #f1da34 0,
+    #f4e240 45%,
+    #f0d831 50%,
+    #f1da34 78%,
+    #f0d632 100%
   );
-  /* background: radial-gradient(114.55% 114.55% at 50% 111.82%,#2f3ec8 0%,#637af4 100%); */
+  color: #000;
   box-shadow: 0 4px 20px #09087333;
   border-radius: 7px;
   transform: scaleX(-1);

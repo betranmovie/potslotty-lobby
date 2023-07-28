@@ -10,7 +10,7 @@ import Layout from 'src/layouts';
 import '@/styles/globals.css';
 // !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
 import '@/styles/colors.css';
-import WebApp from '@twa-dev/sdk';
+
 
 
 type NextPageWithLayout = NextPage & {

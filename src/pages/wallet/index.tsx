@@ -19,14 +19,14 @@ const WalletPage = () => {
     return (
         <div className="mx-4 font-semibold text-white">
             <div className="tab-group flex font-semibold">
-                <button className="active-tab tab svelte-s8eivf m-0 inline-block w-full rounded-t-md px-2 py-3">
+                <button className="active-tab tab svelte-s8eivf m-0 inline-block w-full rounded-tl-md px-2 py-3">
                     <h3>Deposit</h3>
                 </button>{" "}
-                {/* <button className="bg-brandblue-600 tab svelte-s8eivf m-0 inline-block w-full rounded-tr-md px-2 py-1">
+                <button className="bg-brandblue-600 tab svelte-s8eivf m-0 inline-block w-full rounded-tr-md px-2 py-1">
                     <h3>Buy crypto</h3>
-                </button> */}
+                </button>
             </div>{" "}
-            <div className="svelte-s8eivf rounded-b-md border">
+            <div className="svelte-s8eivf rounded-b-xl border">
                 <div className="mx-4 mb-4">
                     <div className="mx-auto my-10 w-32 content-center self-center">
                         <span className="inline-flex h-9 items-center rounded-md px-2.5 py-0.5 text-sm font-medium">
