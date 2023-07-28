@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const instance = axios.create({
-  baseURL: 'https://potslot-api.loca.lt/api', // Replace with your API base URL
+  baseURL: 'https://2e50-2001-ee0-50c8-8440-989f-2679-8c35-6083.ngrok-free.app/api', // Replace with your API base URL
   headers: {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*',

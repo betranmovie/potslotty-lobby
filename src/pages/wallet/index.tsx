@@ -19,7 +19,7 @@ const WalletPage = () => {
     return (
         <div className="mx-4 font-semibold text-white">
             <div className="tab-group flex font-semibold">
-                <button className="active-tab tab svelte-s8eivf m-0 inline-block w-full rounded-t-md px-2 py-3">
+                <button className="btn active-tab tab svelte-s8eivf m-0 inline-block w-full rounded-t-md px-2 py-3">
                     <h3>Deposit</h3>
                 </button>{" "}
                 {/* <button className="bg-brandblue-600 tab svelte-s8eivf m-0 inline-block w-full rounded-tr-md px-2 py-1">
