@@ -1,4 +1,5 @@
 import { fetchGameDetail } from '@/apis/games'
+import Loader from '@/components/Loader'
 import Link from 'next/link'
 import { Router, useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
@@ -21,22 +22,22 @@ export default function GameDetail() {
 
   return (
     <div className='flex justify-center items-center'>
-      {isLoading ?
-        <span className="loader"></span>
-        :
-        <div className='flex flex-col h-screen w-screen'>
-          <Iframe url={gameInfo?.url}
-            className=''
-          
-            styles={{
-              width: '100%',
-              height: '100%'
-            }}
-          />
-         
-        </div>
 
-      }
+
+
+      <div className='flex flex-col h-screen w-screen'>
+        {isLoading && <Loader />}
+        <Iframe url={gameInfo?.url}
+          className=''
+          styles={{
+            width: '100%',
+            height: '100%'
+          }}
+        />
+
+      </div>
+
+
     </div>
   )
 }
