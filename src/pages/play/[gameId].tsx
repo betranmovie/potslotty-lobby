@@ -10,11 +10,14 @@ export default function GameDetail() {
   const [isLoading, setIsLoading] = useState<boolean>(true)
 
   const router = useRouter()
-  const idGame = router.query.gameId + ""
+  const gameData = router.query.gameId + ""
+  const idCasino = gameData.substring(0,gameData.indexOf("-"))
+  const idGame = gameData.replace(`${idCasino}-`, "")
+
 
   useEffect(() => {
     (async () => {
-      let resGameInfo = await fetchGameDetail(idGame)
+      let resGameInfo = await fetchGameDetail(idCasino, idGame)
       setGameInfo(resGameInfo)
       setIsLoading(false)
     })()

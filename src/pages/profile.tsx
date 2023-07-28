@@ -1,8 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useLocalStorage } from 'usehooks-ts'
 
 const ProfileUser = () => {
   const [withdrawals, setWithdrawals] = useState(true);
+  const [userData, setUserData] = useLocalStorage<any>('userdata', null)
+  const [userName, setUserName] = useState<string>("No Name")
 
+  useEffect(()=>{
+    setUserName(userData?.firstName)
+  },[userData])
+  
   return (
     <div className="px-4 profile-user">
       <div>
@@ -17,7 +24,7 @@ const ProfileUser = () => {
           >
             <h1
               className="text-center text-base rounded-md border mr-1 bg-brandblue-400 px-3 border-[#28293F]"
-            >Anh Việt</h1>
+            >{userName}</h1>
             <h2
               className="border text-base text-center rounded-md bg-brandblue-400 px-3 border-[#28293F]"
             >LVL 1</h2>

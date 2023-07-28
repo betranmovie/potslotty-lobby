@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import './profile.css';
+@import './button.css';
 @import './referrals.css';
 
 /* latin */
@@ -1922,16 +1923,7 @@ menu.svelte-1x119o6 a.svelte-1x119o6 {
 
 .arrow-button.svelte-9k01mu {
   margin-right: 10px;
-  background-image: linear-gradient(
-    to right,
-    #b66d10 0,
-    #cd8616 22%,
-    #e3a117 45%,
-    #e8ad19 50%,
-    #edb626 55%,
-    #edb626 78%,
-    #f9c33b 100%
-  );
+  
   /* background: radial-gradient(114.55% 114.55% at 50% 111.82%,#2f3ec8 0%,#637af4 100%); */
   box-shadow: 0 4px 20px #09087333;
   border-radius: 7px;

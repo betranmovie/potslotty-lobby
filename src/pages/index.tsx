@@ -12,9 +12,7 @@ export default function index() {
     const [listGame, setListGame] = useState<IGameCategory>()
 
     const renderCategory = () => {
-
         for (let key in listGame) {
-
             return <CategoryList listGame={listGame[key]} categoryName={key} />
         }
     }
@@ -84,8 +82,9 @@ export default function index() {
             <CategoryList categoryName={"Wild Wild West"} /> */}
 
             {
-
-                renderCategory()
+                listGame && Object.keys(listGame).map((key: any) => (
+                    <CategoryList listGame={listGame[key]} categoryName={key} />
+                ))
 
             }
 

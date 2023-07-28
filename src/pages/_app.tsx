@@ -45,13 +45,16 @@ export default function MyApp(props: MyAppProps) {
         (async () => {
             const WebApp: any = await import("@twa-dev/sdk")
             WebApp.default.enableClosingConfirmation()
-            console.log(idGame)
-            
-            if(idGame || path=='/wallet' || path == '/withdrawal'){
+            console.log(path)
+            console.log(router)
+            if(path!=='/'){
                 WebApp.default.BackButton.show()
+                console.log(true)
             }
             else{
                 WebApp.default.BackButton.hide()
+                console.log(false)
+
             }
             console.log(WebApp.default.initData)
             WebApp.default.expand()
