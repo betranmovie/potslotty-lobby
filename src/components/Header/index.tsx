@@ -74,12 +74,14 @@ export default function Header() {
                     </svg>{" "}
                     <span   onClick={() => router.push("/withdrawal")} className="text-white cursor-pointer">{balance}</span>
                 </button>
-                <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png"
-                    width={30}
-                    height={30}
-                    alt="logo"
-                />
+                <Link href="/profile" className="contents">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png"
+                        width={30}
+                        height={30}
+                        alt="logo"
+                    />
+                </Link>
             </div>
         </div>
     );
