@@ -14,8 +14,6 @@ const PRICE_NUMBERS = [5, 10, 20, 50, 100, 150, 200, 250];
 const WalletPage = () => {
     const [numValue, setNumValue] = useState<number>(5)
 
-
-
     return (
         <div className="mx-4 font-semibold text-white">
             <div className="tab-group flex font-semibold">
