@@ -30,7 +30,7 @@ export default function MyApp(props: MyAppProps) {
     const getLayout = Component.getLayout ?? ((page: any) => page);
 
     const idGame = router.query.gameId
-    const path = router.asPath 
+    const path = router.pathname 
 
 
     useEffect(() => {
@@ -45,16 +45,12 @@ export default function MyApp(props: MyAppProps) {
         (async () => {
             const WebApp: any = await import("@twa-dev/sdk")
             WebApp.default.enableClosingConfirmation()
-            console.log(path)
-            console.log(router)
-            if(path!=='/'){
-                WebApp.default.BackButton.show()
-                console.log(true)
+           
+            if(path.split('/')[1]===""){
+                WebApp.default.BackButton.hide()
             }
             else{
-                WebApp.default.BackButton.hide()
-                console.log(false)
-
+                WebApp.default.BackButton.show()
             }
             console.log(WebApp.default.initData)
             WebApp.default.expand()
