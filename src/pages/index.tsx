@@ -44,8 +44,8 @@ export default function index() {
 
             }
             let reslistGame = await fetchListGame()
-            let listGameOfTheWeek = reslistGame["Game Of Week"]
-            setGameOfWeek(listGameOfTheWeek[0])
+            let listGameOfTheWeek = reslistGame && reslistGame["Game Of Week"]
+            listGameOfTheWeek&& setGameOfWeek(listGameOfTheWeek[0])
             setListGame(reslistGame)
         })()
     }, [])
@@ -57,7 +57,7 @@ export default function index() {
                 {gameOfWeek && <div className='game-off-week w-full game-of-the-week rounded-xl grid grid-cols-2'>
                     <div className='pl-4 h-full flex flex-col justify-center'>
                         <h1 className='text-black heading-1 uppercase'>GAME OF THE WEEK</h1>
-                        <Link  href={`/play/${gameOfWeek?.casinoId}-${gameOfWeek.id}`} className='btnsecondary mt-3 svelte-u5bxng rounded-xl '>
+                        <Link href={`/play/${gameOfWeek?.casinoId}-${gameOfWeek.id}`} className='btnsecondary mt-3 svelte-u5bxng rounded-xl '>
                             <h1 className='lg:p-5 p-2 font-bold md:text-xl lg:text-2xl bnt-text-1'>Play</h1>
                         </Link>
                     </div>
@@ -95,7 +95,7 @@ export default function index() {
             <CategoryList categoryName={"Wild Wild West"} /> */}
 
             {
-                listGame && Object.keys(listGame).map((key: any) => (
+                listGame && Object.keys(listGame)?.map((key: any) => (
                     <CategoryList listGame={listGame[key]} categoryName={key} />
                 ))
 

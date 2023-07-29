@@ -73,7 +73,7 @@ const WalletPage = () => {
                     </div>
 
                     <div className="hide-scroll svelte-s8eivf flex overflow-x-auto mt-4">
-                        {PRICE_NUMBERS.map((number) => (
+                        {PRICE_NUMBERS?.map((number) => (
                             <div
                                 key={number}
                                 className="game-icon-container svelte-s8eivf mr-3 flex h-12 w-20 flex-shrink-0 cursor-pointer flex-wrap items-center justify-center rounded-md"
