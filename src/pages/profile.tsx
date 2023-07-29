@@ -38,7 +38,7 @@ const ProfileUser = () => {
         <div className="visible text-white bg-[#28293F] border text-left p-4 my-4 rounded-lg border-white">
           To withdraw, please add your TON wallet address
           <br />
-          <div className="flex justify-between">
+          <div className="flex justify-between mt-1">
             <input
               className="buy-input border-b border-white bg-transparent text-sm w-4/6 inline-block svelte-13o469e pl-0 pb-1"
               type="text"
@@ -50,7 +50,7 @@ const ProfileUser = () => {
           </div>
         </div>
       </div>
-      <div>
+      {/* <div>
         <h1 className="text-lg font-semibold py-2 mt-5 uppercase text-white">Settings</h1>
         <div className="h-screen/4">
           <div>
@@ -84,7 +84,7 @@ const ProfileUser = () => {
         </div>
         <h1 className="text-lg py-2 mt-5 uppercase font-semibold text-white">Transactions</h1>
         <div className="h-screen/4"><div><ul> </ul></div></div>
-      </div>
+      </div> */}
     </div>
   )
 }
