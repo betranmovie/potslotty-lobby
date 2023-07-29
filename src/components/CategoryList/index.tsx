@@ -19,7 +19,7 @@ export default function CategoryList({ categoryName, listGame }: Props) {
     return (
         <div className='mx-4 mb-6'>
             <div className='flex'>
-                <h1 className=' text-white text-base py-2 uppercase font-semibold lg:text-xl'>{categoryName}</h1>
+                <h1 className=' text-white text-base py-2 uppercase font-semibold lg:text-xl category-titile'>{categoryName}</h1>
                 <span className=' grow'></span>
                 <button onClick={() => scroll(-200)} className='btnprev mr-2'>
                     <svg className="mx-auto lg:h-3 h-3" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1L1 5L6 9" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path></svg>

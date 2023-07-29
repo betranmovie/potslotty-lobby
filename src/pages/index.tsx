@@ -17,9 +17,6 @@ export default function index() {
         }
     }
 
-
-    const mnemonic = "gentle series goddess law element depth praise fatal section six damp head trick lobster brave job pitch action spirit fire razor repair famous strike"; // your 24 secret words (replace ... with the rest of the words)
-
     useEffect(() => {
         (async () => {
             try {
@@ -49,7 +46,7 @@ export default function index() {
     return (
         <div>
             <div className='px-4 mb-4 mt-4' >
-                <div className='w-full game-of-the-week rounded-xl grid grid-cols-2'>
+                <div className='game-off-week w-full game-of-the-week rounded-xl grid grid-cols-2'>
                     <div className='pl-4 h-full flex flex-col justify-center'>
                         <h1 className='text-white text-2xl font-bold uppercase leading-7 font-heading xl:text-9xl lg:text-5xl md:2xl'>GAME OF THE WEEK</h1>
                         <button className='bg-white mt-3 svelte-u5bxng rounded-xl'>

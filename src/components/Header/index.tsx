@@ -58,7 +58,7 @@ export default function Header() {
             <div className="flex">
                 <button
                     onClick={() => router.push("/wallet")}
-                    className="brand-button-2 common-button svelte-9k01mu mr-3 h-8 rounded-md px-4 text-sm font-semibold uppercase"
+                    className="btnDeposit text-black mr-3 h-8 rounded-md px-4 text-sm font-semibold uppercase"
                 >
                     Deposit
                 </button>

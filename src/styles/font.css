@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'regular';
+    src: local('regular'), url(../assets/fonts/Poppins-Regular.ttf) format('truetype');
+
+}
+
+@font-face {
+    font-family: 'medium';
+    src: local('medium'), url(../assets/fonts/Poppins-Medium.ttf) format('truetype');
+
+}
+
+@font-face {
+    font-family: 'bold';
+    src: local('bold'), url(../assets/fonts/Poppins-Bold.ttf) format('truetype');
+
+}
+
+
+.heading-1{
+    font-family: 'bold';
+    font-size: 32px;
+}
+
+.heading-2{
+    font-family: 'bold';
+    font-size: 24px;
+}
+
+.heading-3{
+    font-family: 'bold';
+    font-size: 18px;
+}
+
+.heading-4{
+    font-family: 'regular';
+    font-size: 16px;
+}
+
+.body-1{
+    font-family: 'regular';
+    font-size: 14px;
+}
+
+.body-2{
+    font-family: 'regular';
+    font-size: 12px;
+}
+.body-3{
+    font-family: 'regular';
+    font-size: 10px;
+}
+
+
+.category-titile{
+    font-family: 'bold';
+    font-size: 16px;
+    line-height: 1;
+}
