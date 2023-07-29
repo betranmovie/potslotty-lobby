@@ -16,10 +16,18 @@
 
 }
 
+@font-face {
+    font-family: 'semibold';
+    src: local('bold'), url(../assets/fonts/Poppins-SemiBold.ttf) format('truetype');
+
+}
+
+
 
 .heading-1{
     font-family: 'bold';
-    font-size: 32px;
+    font-size: 28px;
+    line-height: 0.99;
 }
 
 .heading-2{
@@ -56,4 +64,11 @@
     font-family: 'bold';
     font-size: 16px;
     line-height: 1;
+}
+
+
+.bnt-text-1{
+    font-family: 'semibold';
+    font-size: 14px;
+    line-height: 1.57;
 }

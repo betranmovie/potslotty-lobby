@@ -1649,7 +1649,7 @@ menu.svelte-1x119o6 a.svelte-1x119o6 {
 
 .game-of-the-week {
   @apply py-5;
-  height: 193px;
+  min-height: 193px;
   background-image: url(../assets/images/gameofweek.jpeg);
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -2946,6 +2946,14 @@ menu.svelte-1x119o6 a.svelte-1x119o6 {
   animation: animloader 1s linear infinite;
 }
 
+
+
+.game-item{
+  min-width: 144px;
+  min-height: 108px;
+  flex-grow: 0;
+  border-radius: 12px;
+}
 @keyframes animloader {
   0% {
     box-shadow: 10px 0 rgba(255, 255, 255, 0), 20px 0 rgba(255, 255, 255, 0);
@@ -2958,3 +2966,4 @@ menu.svelte-1x119o6 a.svelte-1x119o6 {
   }
 }
     
+
