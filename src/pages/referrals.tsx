@@ -32,8 +32,8 @@ const ReferralsPage = () => {
           <h3 className="text-lg text-center mt-2 mb-4 select-none">
             <span className="h-8 w-full inline-flex items-center rounded-md balance-container px-2.5 py-0.5 text-sm font-bold bg-[#fff7d4]">
               <span className="mx-auto special-text text-black">
-                <span className="font-semibold text-xs">whale.io/?start=</span>
-                115bdc993c8aa33e
+                <span className="font-semibold text-xs"></span>
+                Coming Soon
               </span>
             </span>
           </h3>{" "}
@@ -56,7 +56,7 @@ const ReferralsPage = () => {
         <div className="mb-4">
           <div className="overflow-x-auto flex svelte-zj5ccq">
             <button className="mr-2 payment-option selected-payment-option rounded-lg svelte-zj5ccq">
-              <div className="h-8 w-20 flex items-center">
+              <div className="h-8 flex items-center">
                 <div className="mx-auto">
                   <p className="text-xs font-semibold px-2 text-center svelte-zj5ccq">
                     This Month
@@ -65,7 +65,7 @@ const ReferralsPage = () => {
               </div>
             </button>{" "}
             <button className="mr-2 payment-option  rounded-lg svelte-zj5ccq">
-              <div className="h-8 w-20 flex items-center">
+              <div className="h-8 flex items-center">
                 <div className="mx-auto">
                   <p className="text-xs font-semibold px-1 text-center svelte-zj5ccq">
                     Last Month
@@ -74,7 +74,7 @@ const ReferralsPage = () => {
               </div>
             </button>{" "}
             <button className="mr-2 payment-option  rounded-lg svelte-zj5ccq">
-              <div className="h-8 w-20 flex items-center">
+              <div className="h-8 flex items-center">
                 <div className="mx-auto">
                   <p className="text-xs font-semibold px-1 text-center svelte-zj5ccq">
                     All Time
