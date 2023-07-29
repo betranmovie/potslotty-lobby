@@ -22,20 +22,20 @@ const ProfileUser = () => {
           <div className="h-8 w-full -mt-3 text-white"><div className="w-full px-3"><div
             className="inline-flex items-center"
           >
-            <h1
-              className="text-center text-base rounded-md border mr-1 bg-brandblue-400 px-3 border-[#28293F]"
-            >{userName}</h1>
             <h2
-              className="border text-base text-center rounded-md bg-brandblue-400 px-3 border-[#28293F]"
+              className="text-center text-base rounded-md border mr-1 bg-[#363127] px-3 border-[#28293F]"
+            >{userName}</h2>
+            <h2
+              className="border text-base text-center rounded-md bg-[#363127] px-3 border-[#28293F]"
             >LVL 1</h2>
           </div>
-            <div className="w-full mt-2 inline-block progress-bar-container bg-[#33354f] rounded-[27px]" >
-              <div className="progress-bar-fill text-xs font-medium text-center p-0.5 leading-none rounded-full svelte-13o469e" style={{ width: "25%" }}>25%</div>
+            <div className="w-full mt-2 inline-block progress-bar-container bg-[#37342E] rounded-[27px]" >
+              <div className="progress-bar-fill text-black text-xs font-medium text-center p-0.5 leading-none rounded-full svelte-13o469e" style={{ width: "25%" }}>25%</div>
             </div>
           </div>
           </div>
         </div>
-        <div className="visible text-white bg-[#28293F] border text-left p-4 my-4 rounded-lg border-white">
+        <div className="visible text-white bg-[#28293F] border text-left p-4 my-4 rounded-lg border-[#f5e544]">
           To withdraw, please add your TON wallet address
           <br />
           <div className="flex justify-between mt-1">
@@ -44,14 +44,14 @@ const ProfileUser = () => {
               type="text"
               placeholder="TON address here"
             />
-            <button className="text-sm rounded-md py-1 w-3/12 ml-3 payment-method-button inline-block border border-white border-[#28293F]">
+            <button className="text-sm rounded-md py-1 w-3/12 mr-3 payment-method-button inline-block border border-[#28293F]">
               SAVE
             </button>
           </div>
         </div>
       </div>
-      {/* <div>
-        <h1 className="text-lg font-semibold py-2 mt-5 uppercase text-white">Settings</h1>
+      <div>
+        {/* <h1 className="text-lg font-semibold py-2 mt-5 uppercase text-white">Settings</h1>
         <div className="h-screen/4">
           <div>
             <ul className="font-semibold">
@@ -81,10 +81,10 @@ const ProfileUser = () => {
               </div>
             </ul>
           </div>
-        </div>
+        </div> */}
         <h1 className="text-lg py-2 mt-5 uppercase font-semibold text-white">Transactions</h1>
         <div className="h-screen/4"><div><ul> </ul></div></div>
-      </div> */}
+      </div>
     </div>
   )
 }
