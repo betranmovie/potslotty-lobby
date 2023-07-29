@@ -1851,7 +1851,7 @@ menu.svelte-1x119o6.svelte-1x119o6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #13161eeb;
+  background-color: rgba(0, 0, 0, 0.85);
   color: #fff;
   z-index: 1000;
 }
@@ -1880,8 +1880,8 @@ menu.svelte-1x119o6 a.svelte-1x119o6 {
 
 .normal-button.svelte-1x119o6.svelte-1x119o6 {
   margin-top: 8px;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -2098,6 +2098,10 @@ menu.svelte-1x119o6 a.svelte-1x119o6 {
   box-shadow: 0 4px 20px #09087333;
   border-radius: 5px;
   color: #fff;
+}
+
+.payment-option.svelte-s8eivf .payment-option-icon {
+  background-image: linear-gradient(to bottom, #f6e848 0%, #ecc91d 100%);
 }
 
 .balance-container.svelte-u5bxng.svelte-u5bxng {
@@ -3109,8 +3113,8 @@ menu.svelte-1x119o6 a.svelte-1x119o6 {
 }
 
 .game-icon-container.svelte-s8eivf.svelte-s8eivf {
-  background: var(--custom-theme-button-color);
-  color: var(--custom-theme-button-icon-color);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+  background-color: #1d1c22;
 }
 
 .checking-transactions.svelte-s8eivf.svelte-s8eivf {
@@ -3120,15 +3124,15 @@ menu.svelte-1x119o6 a.svelte-1x119o6 {
 }
 
 .payment-option.svelte-s8eivf.svelte-s8eivf {
-  background: var(--custom-theme-button-color);
-  color: var(--custom-theme-button-icon-color);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+  background-color: #1d1c22;
 }
 
 .payment-method-button.svelte-s8eivf.svelte-s8eivf {
   color: var(--custom-theme-button-icon-color);
   border-radius: 10px;
-  border-top: 1px solid #34364f;
-  background: #28293f;
+  box-shadow: inset 0 -1px 0 0 #4a431f;
+  background-color: #22201c;
 }
 
 .payment-option.svelte-s8eivf svg.svelte-s8eivf {
@@ -3185,12 +3189,14 @@ menu.svelte-1x119o6 a.svelte-1x119o6 {
 }
 
 .tab.active-tab.svelte-s8eivf.svelte-s8eivf {
-  background: radial-gradient(
-    114.55% 114.55% at 50% 111.82%,
-    #2f3ec8 0%,
-    #637af4 100%
-  );
-  box-shadow: 0 4px 20px #09087333;
+  box-shadow: inset 0 -3px 0 0 #99841f, inset 0 2px 0 0 rgba(255, 255, 255, 0.75);
+  background-image: linear-gradient(to bottom, #f6e848 0%, #ecc91d 100%);
+  color: #000000
+}
+
+.tab.svelte-s8eivf {
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+  background-color: #22201c;
 }
 
 .border.svelte-s8eivf.svelte-s8eivf {
@@ -3204,37 +3210,13 @@ menu.svelte-1x119o6 a.svelte-1x119o6 {
 }
 
 .common-button.svelte-9k01mu {
-  margin-right: 10px;
-  background-image: linear-gradient(
-    to right,
-    #b66d10 0,
-    #cd8616 22%,
-    #e3a117 45%,
-    #e8ad19 50%,
-    #edb626 55%,
-    #edb626 78%,
-    #f9c33b 100%
-  );
-  /* background: radial-gradient(114.55% 114.55% at 50% 111.82%,#2f3ec8 0%,#637af4 100%); */
-  box-shadow: 0 4px 20px #09087333;
-  border-radius: 7px;
+  border-radius: 12px;
+  box-shadow: inset 0 -3px 0 0 #99841f, inset 0 2px 0 0 rgba(255, 255, 255, 0.75);
+  background-image: linear-gradient(to bottom, #f6e848 0%, #ecc91d 100%);
+  border-radius: 12px;
+  color: #000;
   z-index: 0;
 }
-
-.tab.active-tab.svelte-s8eivf.svelte-s8eivf {
-  background-image: linear-gradient(
-    to right,
-    #b66d10 0,
-    #cd8616 22%,
-    #e3a117 45%,
-    #e8ad19 50%,
-    #edb626 55%,
-    #edb626 78%,
-    #f9c33b 100%
-  );
-}
-
-
 
 
 .animation {
