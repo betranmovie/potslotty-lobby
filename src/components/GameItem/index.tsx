@@ -9,7 +9,7 @@ export default function GameItem({ gameInfo }: Props) {
 
     return (
         <div className='flex-none mr-5 game-item'>
-            <Link href={`/play/${gameInfo.casinoId}-${gameInfo.id}`} >
+            <Link href={`/play/${gameInfo.id}`} >
                 <img className='md:h-48 h-28 game-item cursor-pointer object-cover	'
                     src={gameInfo.thumbnail}
                     id={gameInfo.name}
