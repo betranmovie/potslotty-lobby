@@ -1,7 +1,9 @@
 import axios from 'axios'
+import 'dotenv/config'
+
 
 const instance = axios.create({
-  baseURL: 'https://2e50-2001-ee0-50c8-8440-989f-2679-8c35-6083.ngrok-free.app/api', // Replace with your API base URL
+  baseURL: process.env.NEXT_PUBLIC_URL_API, // Replace with your API base URL
   headers: {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*',

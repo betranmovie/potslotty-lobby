@@ -1,0 +1,38 @@
+
+.bg-modal-welcome{
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.welcome-modal{
+    flex-grow: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    padding: 32px 16px;
+    border-radius: 12px;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    background-image: linear-gradient(to bottom, #171405 0%, #000 100%);
+}
+.welcome-top{
+    width: 307px;
+    height: 3px;
+    flex-grow: 0;
+    opacity: 0.8;
+    background-color: #f5e544;
+}
+
+.text-body-1{
+    font-family: 'regular';
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+}

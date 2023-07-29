@@ -19,4 +19,5 @@ export interface IGame {
     thumbnail: string,
     provider: IProvider,
     category: ICategory,
+    casinoId?:number
 }
