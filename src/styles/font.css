@@ -41,6 +41,10 @@
 }
 
 .heading-4{
+    font-family: 'semibold';
+    font-size: 24px;
+}
+.heading-5{
     font-family: 'regular';
     font-size: 16px;
 }
@@ -58,6 +62,8 @@
     font-family: 'regular';
     font-size: 10px;
 }
+
+
 
 
 .category-titile{

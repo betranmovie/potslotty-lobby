@@ -57,7 +57,7 @@ export default function index() {
                 {gameOfWeek && <div className='game-off-week w-full game-of-the-week rounded-xl grid grid-cols-2'>
                     <div className='pl-4 h-full flex flex-col justify-center'>
                         <h1 className='text-black heading-1 uppercase'>GAME OF THE WEEK</h1>
-                        <Link href={`/play/${gameOfWeek?.casinoId}-${gameOfWeek.id}`}className='btnsecondary mt-3 svelte-u5bxng rounded-xl '>
+                        <Link  href={`/play/${gameOfWeek?.casinoId}-${gameOfWeek.id}`} className='btnsecondary mt-3 svelte-u5bxng rounded-xl '>
                             <h1 className='lg:p-5 p-2 font-bold md:text-xl lg:text-2xl bnt-text-1'>Play</h1>
                         </Link>
                     </div>

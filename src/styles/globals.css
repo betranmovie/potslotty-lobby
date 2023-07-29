@@ -6,7 +6,7 @@
 @import './referrals.css';
 @import './gradient.css';
 @import './font.css';
-
+@import './modal.css';
 /* latin */
 
 @import "https://fonts.bunny.net/css?family=inter:100,200,300,400,500,600,700,800,900";
@@ -2899,7 +2899,7 @@ menu.svelte-1x119o6 a.svelte-1x119o6 {
 
 
 .animation {
-  height: 150px;
+  height: 250px;
   animation: zoomInZoomOut 1s infinite;
 }
 
@@ -2926,9 +2926,11 @@ menu.svelte-1x119o6 a.svelte-1x119o6 {
 }
 
 .loader {
+  font-family: 'bold' !important; 
   color: #FFF;
   display: inline-block;
-  position: relative;
+  position: absolute;
+  margin-top: 130px;
   font-size: 20px;
   margin-right: 10px;
   font-family: Arial, Helvetica, sans-serif;
@@ -2938,9 +2940,10 @@ menu.svelte-1x119o6 a.svelte-1x119o6 {
   content: '';  
   width: 5px;
   height: 5px;
+  border-radius: 100%;
   background: currentColor;
   position: absolute;
-  bottom: 10px;
+  bottom: 7px;
   right: -5px;
   box-sizing: border-box;
   animation: animloader 1s linear infinite;
