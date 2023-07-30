@@ -13,59 +13,115 @@ const PRICE_NUMBERS = [5, 10, 20, 50, 100, 150, 200, 250];
 
 const WalletPage = () => {
     const [numValue, setNumValue] = useState<number>(5)
+    const [active, setActive] = useState(false)
 
     return (
-        <div className="mx-4 font-semibold text-white">
+        <div className="mx-4 font-semibold text-white wallet">
             <div className="tab-group flex font-semibold">
-                <button className="btn active-tab tab svelte-s8eivf m-0 inline-block w-full rounded-t-md px-2 py-3">
-                    <h3>Deposit</h3>
+                <button onClick={() => setActive(false)} className={`${!active ? 'active-tab rounded-tl-md' : 'rounded-tl-md'} btn tab svelte-s8eivf m-0 inline-block w-full px-2 py-3`}>
+                    <h3 className="font-bold">Deposit</h3>
                 </button>{" "}
-                <button className="bg-brandblue-600 tab svelte-s8eivf m-0 inline-block w-full rounded-tr-md px-2 py-1">
-                    <h3>Buy Crypto</h3>
+                <button onClick={() => setActive(true)} className={`${active ? 'active-tab rounded-tr-md' : 'rounded-tr-md'}  bg-brandblue-600 tab svelte-s8eivf m-0 inline-block w-full px-2 py-1`}>
+                    <h3 className="font-bold">Buy Crypto</h3>
                 </button>
             </div>{" "}
-            <div className="svelte-s8eivf rounded-b-md border">
-                <div className="mx-4 mb-4">
-                    <div className="mx-auto my-10 mr-4 content-center self-center flex justify-end">
-                        <span className="inline-flex h-9 items-center rounded-md px-2.5 py-0.5 text-sm font-medium">
-                            <input
-                                className="deposit-input svelte-s8eivf w-16 border-transparent text-3xl"
-                                type="number"
-                                min={0}
-                                defaultValue={numValue}
-                                step="0.1"
-                            />{" "}
-                            <button className="text-brandblue-200 w-max flex items-center py-2 justify-between px-1.5 payment-method-button svelte-s8eivf ml-2 pr-3 rounded-md text-lg">
-                                <img className="ml-1 inline-block h-6 w-6" src="assets/images/icons/icon_money.svg" alt="icon_money" />{" "}
-                                <span className="mx-2">TON</span>{" "}
-                                <img className="svg-inline--fa fa-caret-down h-[6px] inline" src="assets/images/icons/icon_down-round.svg" alt="icon_down-round" />
-                                {/* <i class="fa-light fa-caret-down"></i> */}
-                            </button>
-                        </span>
-                    </div>
-
-                    <div className="hide-scroll svelte-s8eivf flex overflow-x-auto mt-4">
-                        {PRICE_NUMBERS?.map((number) => (
-                            <div
-                                key={number}
-                                className="game-icon-container svelte-s8eivf mr-3 flex h-12 w-20 flex-shrink-0 cursor-pointer flex-wrap items-center justify-center rounded-md"
-                                onClick={() => setNumValue(number)}
-                            >
-                                {number}
+            <div className="border-[#302d27] rounded-b-2xl border">
+                {
+                    active ?
+                        <div className="mx-4 mb-4">
+                            <div className="mx-auto my-10 mr-4 content-center self-center flex justify-end">
+                                <span className="inline-flex h-9 items-center rounded-md px-2.5 py-0.5 text-sm font-medium">
+                                    <input
+                                        className="deposit-input text-right svelte-s8eivf w-full border-transparent text-3xl"
+                                        type="number"
+                                        min={0}
+                                        defaultValue={1000}
+                                        step="0.1"
+                                    />{" "}
+                                    <button className="text-brandblue-200 w-max flex flex-[0_0_auto] items-center py-2 justify-between px-1.5 payment-method-button svelte-s8eivf ml-2 pr-3 rounded-md text-lg">
+                                        <img className="ml-1 inline-block h-6 w-6" src="assets/images/icons/icon_inr.svg" alt="icon_inr" />{" "}
+                                        <span className="mx-2">INR</span>{" "}
+                                        <img className="svg-inline--fa fa-caret-down h-[6px] inline" src="assets/images/icons/icon_down-round.svg" alt="icon_down-round" />
+                                    </button>
+                                </span>
                             </div>
-                        ))}
-                    </div>
+                            <div className="stats-container items-center p-3 mt-3 flex svelte-zj5ccq rounded-[10px] text-white">
+                                <h2 className="text-base font-semibold inline-block">
+                                    Token
+                                </h2>{" "}
+                                <span className="grow" />{" "}
+                                <span className="mx-2">TON</span>
+                                <img src="assets/images/icons/icon_money.svg" alt="icon_money" />
+                            </div>{" "}
+                            <div className="stats-container items-center p-3 mt-3 flex svelte-zj5ccq rounded-[10px] text-white">
+                                <h2 className="text-base font-semibold">Provider</h2>{" "}
+                                <span className="grow" />{" "}
+                                <p className="inline-block mr-2">Onramp.money</p>
+                            </div>{" "}
+                            <div className="stats-container items-center p-3 mt-3 flex svelte-zj5ccq rounded-[10px] text-white">
+                                <h2 className="text-base font-semibold">Method</h2>{" "}
+                                <span className="grow" />{" "}
+                                <img className="w-[70px]" src="assets/images/icons/icon_upi.svg" alt="icon_upi" />
+                            </div>{" "}
+                            <div className="svelte-s8eivf mt-4 grid grid-cols-1">
+                                <a href={`${API_TRANSFER}${TON_ADDRESS}?amount=${numValue}`} className="flex justify-center font-bold items-center button deposit-button h-12 common-button svelte-9k01mu">
+                                    Buy Crypto
+                                </a>{" "}
+                            </div>
+                            <div className="border border-[#302d27] mt-3 p-2.5 rounded-xl">
+                                <p className="text-[#8e8d91] text-xs">
+                                Disclaimer: You will now leave Potslotty and be taken to ONRAMP.MONEY. Services relating to payments to payments are provided by which is a seperate platform owned by a third party. Please read and agree to’s Terms of Use before using their service. For any questions relatin to payments, please contact support.
+                                </p>
+                            </div>
+                            <div className="border border-[#302d27] mt-3 p-2.5 rounded-xl">
+                                <p className="text-[#8e8d91] text-xs">
+                                NOTICE: Depending on the blockchain. the deposit may take a few minutes to arrive
+                                </p>
+                            </div>
+                        </div> :
+                        <div className="mx-4 mb-4">
+                            <div className="mx-auto my-10 mr-4 content-center self-center flex justify-end">
+                                <span className="inline-flex h-9 items-center rounded-md px-2.5 py-0.5 text-sm font-medium">
+                                    <input
+                                        className="deposit-input svelte-s8eivf w-16 border-transparent text-3xl"
+                                        type="number"
+                                        min={0}
+                                        defaultValue={numValue}
+                                        step="0.1"
+                                    />{" "}
+                                    <button className="text-brandblue-200 w-max flex items-center py-2 justify-between px-1.5 payment-method-button svelte-s8eivf ml-2 pr-3 rounded-md text-lg">
+                                        <img className="ml-1 inline-block h-6 w-6" src="assets/images/icons/icon_money.svg" alt="icon_money" />{" "}
+                                        <span className="mx-2">TON</span>{" "}
+                                        <img className="svg-inline--fa fa-caret-down h-[6px] inline" src="assets/images/icons/icon_down-round.svg" alt="icon_down-round" />
+                                        {/* <i class="fa-light fa-caret-down"></i> */}
+                                    </button>
+                                </span>
+                            </div>
 
-                    <div className="pt-6">
-                        <PaymentOptions />
+                            <div className="hide-scroll svelte-s8eivf flex overflow-x-auto mt-4">
+                                {PRICE_NUMBERS?.map((number) => (
+                                    <div
+                                        key={number}
+                                        className="game-icon-container svelte-s8eivf mr-3 flex h-12 w-20 flex-shrink-0 cursor-pointer flex-wrap items-center justify-center rounded-md"
+                                        onClick={() => setNumValue(number)}
+                                    >
+                                        {number}
+                                    </div>
+                                ))}
+                            </div>
 
-                        <div className="svelte-s8eivf mt-4 grid grid-cols-1">
-                            <a href={`${API_TRANSFER}${TON_ADDRESS}?amount=${numValue}`} className="flex justify-center items-center button deposit-button h-12 common-button svelte-9k01mu">
-                                Deposit
-                            </a>{" "}
+                            <div className="pt-6">
+                                <PaymentOptions />
+
+                                <div className="svelte-s8eivf mt-4 grid grid-cols-1">
+                                    <a href={`${API_TRANSFER}${TON_ADDRESS}?amount=${numValue}`} className="flex justify-center items-center font-bold button deposit-button h-12 common-button svelte-9k01mu">
+                                        Deposit
+                                    </a>{" "}
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                }
+
             </div>
         </div>
     );
@@ -138,7 +194,7 @@ export const PaymentOptions = () => (
                 }
                 label="@CryptoBot"
             /> */}
-             <PaymentOptionButton
+            <PaymentOptionButton
                 isActive={true}
                 icon={
                     <svg
@@ -152,7 +208,7 @@ export const PaymentOptions = () => (
                 label="QR Code"
             />
             <PaymentOptionButton
-            
+
                 icon={
                     <img className="mx-auto h-[20px]" src="assets/images/icons/icon_wallet.svg" alt="icon_wallet" />
                 }
@@ -164,7 +220,7 @@ export const PaymentOptions = () => (
                 }
                 label="CryptoBot"
             />
-           
+
         </div>
     </div>
 );
