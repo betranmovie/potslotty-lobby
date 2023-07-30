@@ -72,8 +72,7 @@ export default function Header() {
                 <Link href="/profile" className="contents">
                     <img
                         src="https://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png"
-                        width={30}
-                        height={30}
+                        className="w-[30px] h-[30px]"
                         alt="logo"
                     />
                 </Link>
