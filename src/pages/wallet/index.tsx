@@ -64,7 +64,7 @@ const WalletPage = () => {
                                 <img className="w-[70px]" src="assets/images/icons/icon_upi.svg" alt="icon_upi" />
                             </div>{" "}
                             <div className="svelte-s8eivf mt-4 grid grid-cols-1">
-                                <a className="flex justify-center font-bold items-center button deposit-button h-12 common-default-button svelte-9k01mu">
+                                <a className="flex justify-center font-bold items-center button deposit-button h-12 common-disable-button svelte-9k01mu">
                                     Buy Crypto
                                 </a>{" "}
                             </div>
